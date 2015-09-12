@@ -1,0 +1,10 @@
+product;convert_to;type;probability;sum
+mozilla application suite;seamonkey;rename;1.0;6983
+bespin;skywriter;rename;1.0;386
+mozilla developer center;mozilla developer network;rename;1.0;505
+weave;mozilla service;rename;1.0;167
+browser;core;rename;1.0;2848
+firebird;firefox;rename;1.0;149
+mailnews;core;rename;1.0;900
+browser;firefox;fork;1.0;900
+browser;seamonkey;fork;1.0;900

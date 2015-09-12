@@ -1,0 +1,29 @@
+#!/usr/bin/python
+"""Author:
+    Xie Jialiang
+Date:
+    2013-11-14
+Usage:
+    python calculateGLR.py [parameters file] [dictionary of predictors]
+Output:
+    GLR response
+"""
+
+from sys import argv
+
+class GLR(object):
+    """General Linear Regression."""
+    
+    def __init__(self):
+        self._parameters = {}
+
+    def read_parameters_from_file(self, parameters_file):
+        """Read model parameters from file."""
+        
+        self._parameters = {}
+        in_file = open(parameters_file, 'r')
+        for line in in_file:
+            fields = line.sep(';')
+            self.parameters[fields[0]] = float(fields[1])
+        in_file.close()
+    

@@ -1,0 +1,59 @@
+#header{
+    margin-top: 10px;   
+    margin-left: 20px;
+    font-size: 15pt;
+}
+
+#title{
+    font-size: 60pt;
+}
+
+#main{
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 100px;
+}
+
+#paar{
+    width: 250;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#form{
+    font-size: 15pt;
+}
+
+#search{
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#example{
+    padding-top: 25px;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#recommend{
+    float: left;
+    width: 380px;
+}
+
+#warning{
+    float: right;
+    width: 380px;
+}
+
+#example{
+    font-size: 10pt;
+}
+
+#bugid{
+    width: 400px;
+}
+
+

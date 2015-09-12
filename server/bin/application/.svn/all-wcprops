@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/repository/triager/!svn/ver/43/PAQM/bin/application
+END
+queryMetrics.py
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repository/triager/!svn/ver/43/PAQM/bin/application/queryMetrics.py
+END
+extractInfoByBugID.py
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repository/triager/!svn/ver/42/PAQM/bin/application/extractInfoByBugID.py
+END
+calculateGLR.py
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repository/triager/!svn/ver/45/PAQM/bin/application/calculateGLR.py
+END
+leon_lib.py
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repository/triager/!svn/ver/33/PAQM/bin/application/leon_lib.py
+END

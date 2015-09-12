@@ -1,0 +1,34 @@
+#header{
+    margin-top: 10px;   
+    margin-left: 20px;
+    font-size: 15pt;
+}
+
+#main{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+#buginfo{
+    float: left;
+    width: 480px;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-right-color: #CCCCFF;
+}
+
+#prediction{
+    width: 300px;
+    float: right;
+}
+
+#top{
+    padding-top: 50px;
+    height: 250px;
+}
+
+#error{
+    font-size: 25pt;
+    margin-top: 200px;
+}

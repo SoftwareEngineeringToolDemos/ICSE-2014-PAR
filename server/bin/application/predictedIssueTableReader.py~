@@ -1,0 +1,137 @@
+"""
+Author: Leon Xie
+Date: 11/12/2013
+"""
+
+import sys
+
+
+class PredictedIssueTableReader:
+    """
+    Read predicted issue table and return metrics and predicted result
+    """
+
+    def __init__(self, sep = ','):
+        self._sep = sep
+        self._threshold_min = 0.2
+        self._threshold_max = 0.4
+
+    def GenerateQuantileTable(self, predicted_issue_list):
+        """
+        """
+
+        in_file = open(predicted_issue_list, 'r')
+        header_dict = {}
+        quantiles = []
+        is_first_line = True
+        for line in in_file:
+            fields = line[:-1].split(';')
+            # read header
+            if is_first_line == True:
+                # read header
+                column = 0
+                for field in fields:
+                    header_dict[field] = column
+                    column += 1
+                is_first_line = False
+            # search body
+            # skip column names
+            if line[0] == 'b':
+                continue
+            quantiles.append(float(fields[header_dict["prd"]]))
+        in_file.close()
+        # get quantile
+        quantile_values = [0]
+        quantiles = sorted(quantiles)
+        total_num = quantiles.__len__()
+        for quantile in range(1,100):
+            index = total_num * quantile / 100
+            quantile_values.append(quantiles[index])
+        return quantile_values
+
+    def GetThresholdByQuantile(self, quantile_table, quantile):
+        in_file = open(quantile_table, 'r')
+        res = 0.0
+        for line in in_file:
+            fields = line[:-1].split(';')
+            cur_quantile = float(fields[0])/100.0
+            if(quantile <= cur_quantile):
+                res = float(fields[1])
+                break
+        in_file.close()
+        return res
+
+    def ReadThreshold(self, threshold_file):
+        """ 
+        format of threshold_file: min quantile; min_threshold; max_quantile; max_threshold
+        """
+
+        in_file = open(threshold_file, 'r')
+        for line in in_file:
+            fields = line.split(';')
+            self._threshold_min = float(fields[1])
+            self._threshold_max = float(fields[3])
+        in_file.close()
+
+
+    def DoCheckMetricsAndDoPredict(self, predicted_issue_list, query_issue_id):
+        """
+        """
+
+        in_file = open(predicted_issue_list, 'r')
+        target_id = int(query_issue_id)        
+        query_assignment_time = 0
+        result_fields = None
+        is_first_line = True
+        header_dict = {}
+        for line in in_file:
+            fields = line[:-1].split(';')
+            # read header
+            if is_first_line == True:
+                # read header
+                column = 0
+                for field in fields:
+                    header_dict[field] = column
+                    column += 1
+                is_first_line = False
+            # search body
+            # skip column names
+            if line[0] == 'b':
+                continue
+            bug_id = int(fields[header_dict['bug_id']])
+            if bug_id > target_id:
+                # the data has been sorted by bug_id
+                break
+            if bug_id == target_id:
+                when = int(fields[header_dict['when']])
+                if when > query_assignment_time:
+                    query_assignment_time = when
+                    result_fields = fields
+        in_file.close()
+        return self.PackResultAsString(result_fields, header_dict)
+
+    def PackResultAsString(self, fields, header_dict):
+        if fields == None:
+            return 'Error'
+        res = self._sep.join(\
+                [   fields[header_dict['login']], \
+                    str(int(fields[header_dict['when']])/3600/24/365.25+1970), \
+                    fields[header_dict['P']], \
+                    fields[header_dict['nPrdCorTri']], \
+                    fields[header_dict['nPrdTri']], \
+                    fields[header_dict['nLogPrdCorTri']], \
+                    fields[header_dict['nLogPrdTri']], \
+                    fields[header_dict['cnt_max_exp']], \
+                    fields[header_dict['cnt_num']], \
+                    fields[header_dict['cmt_num']], \
+                    fields[header_dict['Role']], \
+                    fields[header_dict['prd']], \
+                    str(self._threshold_min), \
+                    str(self._threshold_max) ])
+        return res
+
+if __name__ == "__main__":
+    predict = PredictedIssueTableReader(',')
+#predict.ReadThreshold(sys.argv[])
+    print predict.DoCheckMetricsAndDoPredict(sys.argv[1], sys.argv[2])
+

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Set Threshhold</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="set.css" rel="stylesheet" media="screen">
+    <script src="jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="right.js"></script>
+    <script src="right-slider.js"></script>
+    <script type="text/javascript" src="validate-set.js"></script>
+</head>
+<body>
+
+<header class="navbar navbar-default navbar-fixed-top bs-docs-nav" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="navbar-brand">Data Source: Mozilla Bugzilla</div>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <div class="navbar-brand">Time Span: 2001-2011</div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+     
+
+    <div id="main">
+        <div id="header">
+            <p>Set Threshhold</p>
+        </div>
+        
+        <form id="form1" name="form1" method="post" action="/projects/paar/setThreshold.php">
+            <h3>Red the lowest</h3>
+            <div class="rui-slider" data-slider="{min:0,max:100,value:20,update:'left'}">
+                <div class="level"></div>
+                <div class="handle"></div>
+            </div>
+            <input class="percent" type="text" id="left" name="minThre"/>%
+
+
+            <h3>Green the highest</h3>
+            <div class="rui-slider" data-slider="{min:0,max:100,value:80,update:'right'}">
+                <div class="level"></div>
+                <div class="handle"></div>
+            </div>
+            <input class="percent" type="text" id="right" name="maxThre" />%
+
+            <br/>
+            <br/>
+
+            <input type="submit" value="submit" class="btn btn-primary" />
+        </form>
+
+        <h2 style="margin-top:30px">Now:</h2>
+        <p class="report"> Red Flag: color bottom <b>5%</b> with </p>
+        <p class="report"> Green Flag: color bottom <b>5%</b> with </p>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,24 @@
+[How to get scripts file]
+1. Checkout repository: (under your folder)> svn co http://192.168.1.30/repository/triager
+(if you work in your own computer outside the intranet of the lab, you can check out the code via http://pkuas.sei.pku.edu.cn/repository/triager)
+2. User name: zhengqm Password: zhengqm
+
+[How to submit code]
+1. Update first: svn up
+2. Commit the code (comment is necessary): svn ci -m "<[action type]:description>"
+[action type] could be ADD/REMOVE/MOD
+e.g. svn ci -m "<MOD:change method to calculate the date>"
+
+[How to run the script]
+see readme.txt under the project
+
+[To do list]
+1. exam the logic and code generating llevel3 (artery/export_llevel3.py)
+2. exam the logic and code generating llevel4_* (artery/export_llevel4_*.py)
+3. exam the script to calculate the correctness of product assigning (artery/link_assigning_correct.py)
+4. exam the script to validate the correctness of product assigning (artery/link_assigning_valid.py)
+
+Tips:
+1. try to observe the output of each step
+2. the visio chart in the mail may help
+3. Makefile would help

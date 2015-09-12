@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PAAR</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="result.css">
+</head>
+<body>
+    <div id="header">
+        <p>
+            [Data Source: <a href="http://bugzilla.mozilla.org/"><img src="logo_mozilla.jpg" alt="Mozilla" style="width:45px;"></a>]
+        </p>
+        <p>
+            [Learning Set: 2001 - 2007]
+        </p>
+    </div>
+    <div id="main">
+        <div id="top">
+            <div id="buginfo">
+                <h2>BugID: </h2>
+                <h3>Product: </h3>
+                <h3>Actor: </h3>
+                <br>
+                <br>
+                <br>
+            </div>
+            <div id="prediction">
+                <h2>Prediction:</h2>
+                Warning! Picture in need.
+
+            </div>
+        </div>
+
+        <div id="metrics">
+            <h2>Metrics Calculated</h2>
+            <br/>
+            <div id="product"></div>
+            <h4>Product</h4>
+            <table class="table table-hover">
+                <tr>
+                    <td>Product's Error Rate</td>
+                    <td></td>
+                </tr>
+            </table>
+            <div id="actor"></div>
+            <h4>Actor</h4>
+            <table class="table table-hover">
+                <tr>
+                    <td>Actor's Error Rate for The Product</td>
+                    <td></td>
+                </tr>
+                <tr class="danger">
+                    <td >Maximum Experience over All Peers</td>
+                    <td> Red to indicate a low number</td>
+                </tr>
+                <tr>
+                    <td>Logarithm of Number of Actor's Peers</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Logarithm of Average Social Depth</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Actor's Role</td>
+                    <td></td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+    <script src="jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
