@@ -32,7 +32,7 @@ This repository is contains information related to the tool PAR developed by Dr.
 The tool was originally presented in [this paper](http://dl.acm.org/citation.cfm?id=2591073&CFID=706774826&CFTOKEN=98353804).
 
 This repository _is not_ the original repository for this tool. Here are some links to the original project:
-* [The Official Project Page, including source code](ttps://github.com/minghuizhou/PAR.git)
+* [The Official Project Page, including source code](https://github.com/minghuizhou/PAR.git)
 * [A Video of the Tool](http://youtu.be/IuykbzSTj8s)
 
 In this repository, for PAR you will find:
