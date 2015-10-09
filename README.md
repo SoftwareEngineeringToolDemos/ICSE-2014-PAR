@@ -57,11 +57,11 @@ at Level 2, click   "Activity Data" (activity_level2, 538M)
 ==================================================================================
 This README document is created for CSC 510 Software engineering course, NCSU, 2015 fall.
 and by
-Name: Yi-Chun Chen
-UnityID: ychen4
-Team: Onslow
+*Name: Yi-Chun Chen
+*UnityID: ychen4
+*Team: Onslow
 
-Studied paper: ICSE- 2014 "Product assignment recommender."
+*Studied paper: ICSE- 2014 "Product assignment recommender."
 
 ==================================================================================
 
