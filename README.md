@@ -48,9 +48,12 @@ Though I had not successfully downloaded installation required data and failed t
 Some installation instruction from authors: (for who want to get it work)
 
 Note,  you need to get two data files (info_level1 and activity_level2) from below and put them on the directory of PAR/server/data/mozilla/:
+
 https://passion-lab.org/subtopic/data_mozilla.php
 Click "Bug", and:
+
 at Level 1, click "Info Data" (info_level1, 3.1G)
+
 at Level 2, click   "Activity Data" (activity_level2, 538M)
 
 
