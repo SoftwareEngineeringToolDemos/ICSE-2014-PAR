@@ -6,7 +6,7 @@ Name: Yi-Chun Chen
 UnityID: ychen4
 Team: Onslow
 
-Studied paper: ICSE- 2011 "Automated Security Hardening for Evolving UML Models."
+Studied paper: ICSE- 2014 "Product assignment recommender."
 ==================================================================================
 The tool PAR is developed for analysis UML models. And it is produced by 
 Dr. Jialiang Xie, Dr. Qimu Zheng, Dr. Minghui Zhou, and Dr. Audris Mockus
