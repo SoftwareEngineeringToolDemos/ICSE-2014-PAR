@@ -37,6 +37,8 @@ There is no executanle file, since the tool is unworkable. I failed to install i
 [Original website: ](https://github.com/minghuizhou/PAR.git)
 
 Here are some installation guide (from the authors' assistance):
+
+
 (*quote)
 Note,  you need to get two data files (info_level1 and activity_level2) from below and put them on the directory of PAR/server/data/mozilla/:
 https://passion-lab.org/subtopic/data_mozilla.php
@@ -44,6 +46,8 @@ Click "Bug", and:
 at Level 1, click "Info Data" (info_level1, 3.1G)
 at Level 2, click   "Activity Data" (activity_level2, 538M)
 (*end quote)
+
+
 --------------------------------------------------------------
 
 [Youtube video for how to using the tool.](http://youtu.be/IuykbzSTj8s):
