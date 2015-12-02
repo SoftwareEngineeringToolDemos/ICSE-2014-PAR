@@ -38,6 +38,7 @@ This repository _is not_ the original repository for this tool. Here are some li
 In this repository, for PAR you will find:
 * :white_check_mark: [Source code](https://github.com/SoftwareEngineeringToolDemos/ICSE-2014-PAR) (available)
 * :x: Executable tool (not available)
+* :x: Virtual machine containing tool (not available)
 
 This repository was constructed by [Yi-Chun Chen(RimiChen)](https://github.com/RimiChen) under the supervision of [Emerson Murphy-Hill](https://github.com/CaptainEmerson). 
 
