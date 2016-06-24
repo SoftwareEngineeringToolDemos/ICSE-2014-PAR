@@ -45,9 +45,8 @@ This repository was constructed by [Yi-Chun Chen(RimiChen)](https://github.com/R
 Thank for all assistances from Dr. Minghui Zhou and her colleagues. 
 Though I had not successfully downloaded installation required data and failed to get it work, due to the limited network speed.
 
-
 -------------------------------
-Some installation instruction from authors: (for who want to get it work)
+Some installation instruction from authors: (for those who want to get it work)
 
 Note,  you need to get two data files (info_level1 and activity_level2) from below and put them on the directory of PAR/server/data/mozilla/:
 
